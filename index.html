@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tailwind Multi Level Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        li:hover>ul {
+            transform: translatex(101%) scale(1);
+        }
+    </style>
+</head>
+
+<body class="h-screen  flex justify-center items-center text-gray-600 font-bold">
+    <div class="group cursor-pointer w-36">
+        <div class="p-2 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 block mb-2 text-center text-white">Television</div>
+        <ul class="scale-0 group-hover:scale-100 absolute space-y-2">
+            <li class="hover:bg-purple-400  w-36 p-2 rounded-lg">Samsung</li>
+            <li class="relative hover:bg-purple-400 rounded-lg">
+                <div class="inline-flex items-center hover:bg-purple-400 rounded-lg">
+                    <div class="w-36 p-2">Toshiba</div>
+                    <span class="font-bold text-lg block mx-5">  > </span>
+                </div>
+                <ul class="absolute top-0 right-0 scale-0">
+                    <li class="hover:bg-purple-400 w-36 p-2 rounded-lg">Model - LXG136</li>
+                    <li class="relative hover:bg-purple-400 rounded-lg">
+                        <div class="inline-flex items-center hover:bg-purple-400 rounded-lg">
+                            <div class="w-36 p-2  ">Inch</div>
+                            <span class="font-bold text-lg block mx-5">  > </span>
+                        </div>
+                        <ul class="absolute top-0 right-0 scale-0">
+                            <li class="hover:bg-purple-400 w-36 p-2 rounded-lg">42 Inch</li>
+                            <li class="hover:bg-purple-400 w-36 p-2 rounded-lg">52 Inch</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="hover:bg-purple-400 w-36 rounded-lg p-2">Sony</li>
+        </ul>
+    </div>
+</body>
+
+</html>
